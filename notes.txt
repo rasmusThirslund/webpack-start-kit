@@ -1,0 +1,47 @@
+The foundation of this build setup is a copy of: 
+
+https://github.com/wbkd/webpack-starter
+
+
+## notes:
+
+enable hot module replacement HMR by adding "--hot" to the script in package.json
+The bug here is when HMR is enabled there is currently no reload when HTML file Changes
+sp HMR only works with js and scss
+
+## Changes to core by Implicit: 
+css #project
+css opionated elements and generics
+
+
+## issues
+dist folder not reset (build does it)
+bundle js hashed => will be an issue in CMS based project
+how to implement something like file include ?
+
+css: .o-box > div > p => produces margin-bottom on p, that should be removed.
+if p is directly inside o-box theres a rule removing the margin.
+lets see how this behaves
+could be a mixin to put on blocks or elements in components
+something like  > *:last-child {margin-bottom: 0}
+
+
+## roadmap
+github repo
+collapsable sections w header on styleguide page
+link to github single files for doc
+sectioned styleguide for paddings/margins
+description to styleguide
+code toggler for styleguide
+
+typo:
+header u top margin - denne sættes i richtext når den er efter et andet element
+ala .o-rich-text > * + h2 {margin-top: 1em}
+
+h1-h6 o-header classes være uden topmargin
+
+p kun margin bottom
+sidste element uden margin bottom
+
+list bare bruges som mixin
+og kodes om så kun ul klassen kan bruges og bruge LI i stedet
