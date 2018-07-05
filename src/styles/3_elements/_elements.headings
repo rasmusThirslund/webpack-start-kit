@@ -1,6 +1,6 @@
 // #PROJECT
 // px sizes taken from existing ramboll design
-// values are used in @import "../../node_modules/inuitcss/elements/elements.headings";
+// values are used in @import "../../node_modules/inuitcss/3_elements/3_elements.headings";
 
 $inuit-font-size-h1:  2.625 * $base-font-size; //  42px; // 42 / 16 = 2,625
 $inuit-font-size-h2:  2.25 * $base-font-size; // 36px; 36 / 16 = 2,25
@@ -10,9 +10,10 @@ $inuit-font-size-h5:  18px;
 $inuit-font-size-h6:  16px;
 
 /**
- * Overriding margins on generic heading
+ * Overriding margins on 2_generic heading
 */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1em; // this breaks the always apply margin in same direction principle
+  // todo: move to richtext
+  // margin-top: 1em; // this breaks the always apply margin in same direction principle
   margin-bottom: .7em;
 }

@@ -25,7 +25,7 @@
  * TOOLS
  * Font-size............A mixin which guarantees baseline-friendly line-heights.
  * Clearfix.............Micro clearfix mixin.
- * Hidden...............Mixin for hiding elements.
+ * Hidden...............Mixin for hiding 3_elements.
  * Sass MQ..............inuitcss’ default media query manager.
  *
  * GENERIC
@@ -86,7 +86,7 @@ $inuit-global-line-height: $base-line-height-px;
 
 
 // TOOLS
-@import "tools/tools.aliases";
+@import "1_tools/tools.aliases";
 @import "../../node_modules/inuitcss/tools/tools.font-size";
 @import "../../node_modules/inuitcss/tools/tools.clearfix";
 @import "../../node_modules/inuitcss/tools/tools.hidden";
@@ -95,7 +95,8 @@ $inuit-global-line-height: $base-line-height-px;
 // comment out if not needed =>
 $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 @import "../../node_modules/sass-mq/mq";
-@import "tools/tools.mixin.tweaks";
+@import "1_tools/tools.mixin.tweaks";
+@import "1_tools/tools.mixin.list";
 
 
 
@@ -104,7 +105,7 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 @import "../../node_modules/inuitcss/generic/generic.normalize";
 @import "../../node_modules/inuitcss/generic/generic.reset";
 @import "../../node_modules/inuitcss/generic/generic.shared";
-@import "generic/generic.fonts";
+@import "2_generic/generic.fonts";
 
 
 
@@ -112,8 +113,8 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 
 // ELEMENTS
 @import "../../node_modules/inuitcss/elements/elements.page";
-@import "elements/elements.page.paragraph";
-@import "elements/elements.headings"; // sizes configurations
+@import "3_elements/elements.page.paragraph";
+@import "3_elements/elements.headings"; // sizes configurations
 @import "../../node_modules/inuitcss/elements/elements.headings";
 @import "../../node_modules/inuitcss/elements/elements.images";
 @import "../../node_modules/inuitcss/elements/elements.tables";
@@ -129,10 +130,11 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 @import "../../node_modules/inuitcss/objects/objects.wrapper";
 @import "../../node_modules/inuitcss/objects/objects.layout";
 @import "../../node_modules/inuitcss/objects/objects.media";
-@import "objects/objects.media";
+@import "4_objects/objects.media";
 @import "../../node_modules/inuitcss/objects/objects.flag";
 @import "../../node_modules/inuitcss/objects/objects.list-bare";
 @import "../../node_modules/inuitcss/objects/objects.list-inline";
+@import "4_objects/objects.lists";
 @import "../../node_modules/inuitcss/objects/objects.box";
 @import "../../node_modules/inuitcss/objects/objects.block";
 @import "../../node_modules/inuitcss/objects/objects.ratio";
@@ -144,15 +146,17 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 
 
 
+
 // COMPONENTS
 //
-// Build and include your project’s UI components here.
-@import "components/example.components.buttons";
+// Build and include your project’s UI 5_components here.
+@import "5_components/example.components.buttons";
+@import "4_objects/object.richtext";
 
 // (PAGES)  // custom
 //
 //
-@import "components/pages/pages.styleguide";
+@import "5_components/pages/pages.styleguide";
 
 
 
@@ -173,4 +177,4 @@ $inuit-fractions: 1 2 3 4 5 6 !default;
 @import "../../node_modules/inuitcss/utilities/utilities.print";
 @import "../../node_modules/inuitcss/utilities/utilities.hide";
 // custom:
-@import "utilities/utilities.margins";
+@import "6_utilities/utilities.margins";
