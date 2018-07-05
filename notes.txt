@@ -45,3 +45,16 @@ sidste element uden margin bottom
 
 list bare bruges som mixin
 og kodes om så kun ul klassen kan bruges og bruge LI i stedet
+
+
+
+css buttons:
+soft
+hard
+full
+half
+
+objects to kit?:
+pill
+lozenges (loz)
+block list?
