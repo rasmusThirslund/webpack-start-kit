@@ -29,5 +29,8 @@ $base-line-height-unitless: 1.5;
 $base-line-height-px: $base-font-size * $base-line-height-unitless;
 
 
-// wrapper max width
+// wrapper max width (overriding)
 $inuit-wrapper-width: 1800px;
+
+// max width of content paragraphs and centered columns
+$paragraph-max-width: 40rem;

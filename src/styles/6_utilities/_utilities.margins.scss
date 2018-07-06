@@ -6,6 +6,6 @@
   margin-left: auto #{$important};
   margin-right: auto #{$important};
 }
-.u-centered {
+.u-center {
   @include mix-center-block(!important);
 }

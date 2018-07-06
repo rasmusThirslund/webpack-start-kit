@@ -3,7 +3,7 @@
 
   // restrain copy text to max width - for better readability
   // change this according to project specifics
-  max-width: 40rem;
+  max-width: $paragraph-max-width;
 
 
   // setting margin top on headers in richtext, to EM, to highten vertical rythm.
