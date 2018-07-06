@@ -95,7 +95,7 @@ $inuit-global-line-height: $base-line-height-px;
 // comment out if not needed =>
 $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 @import "../../node_modules/sass-mq/mq";
-@import "1_tools/tools.mixin.tweaks";
+@import "1_tools/tools.mixin.spacings";
 @import "1_tools/tools.mixin.list";
 @import "1_tools/tools.mixin.sectiongap";
 
