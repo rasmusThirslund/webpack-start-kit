@@ -5,16 +5,19 @@
     <title>Page components</title>
     <!--<link type="text/css" rel="stylesheet" href="/styles/bundle.css">
 -->
-</head>
+<link href="styles/bundle.css" rel="stylesheet"></head>
 <body>
 
-<!-- Rich text example -->
+<!--
+    Rich text example, not really a componentclass but is composed of other objects
+-->
 <div class="o-section">
     <div class="o-wrapper">
             <div class="o-center-column">
 
                 <h2>Rich Text "comp"</h2>
 
+                <!-- %= require('html-loader!./partial.html') % -->
 
                 <div class="o-richtext">
 
@@ -60,5 +63,5 @@
 
 <script src="/bundle.js"></script>
 
-</body>
+<script type="text/javascript" src="bundle.js"></script></body>
 </html>

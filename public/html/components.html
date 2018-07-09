@@ -2,95 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>inuitcss boilerplate</title>
+    <title>Page components</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!--<link type="text/css" rel="stylesheet" href="/styles/bundle.css">
 -->
 </head>
-<body class="c-styleguide">
+<body>
+<!--
+zen/emmet:
+.o-section>.o-wrapper>.o-layout>.o-layout__item
+-->
 
-<h1>Objects and Components</h1>
+<div class="o-section">
+    <div class="o-wrapper">
 
-    <!-- SECTION -->
-    <br>
-    <br>
-    <h2 class="o-wrapper">Section</h2>
-    <div class="o-section o-section--flush" style="background: beige;">
+        <div class="o-layout">
+            <div class="o-layout__item">
+                <h1>Components</h1>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <div class="o-wrapper o-box">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus facere fugiat libero nobis odit omnis quas quia saepe sit vero. Distinctio ea eius incidunt magnam nobis nostrum optio placeat, repudiandae.
+<hr class="u-margin-vertical-huge"/>
+
+
+<!--
+    RICH TEXT IN A SINGLE COLUMN
+   -->
+
+<div class="o-section">
+    <div class="o-wrapper">
+        <div class="o-center-column">
+
+            <h2>Rich Text - heading outside editor content</h2>
+
+            <%= require('html-loader!./views/comp.richtext.html') %>
+
         </div>
 
-    </div>
-
-<div class="o-wrapper">
-
-
-    <!-- RICH TEXT -->
-    <!-- ****************************************** -->
-    <br/>
-    <br/>
-    <hr/>
-    <h2>Richtext wrapper object</h2>
-    <p>
-        The background color is just for displaying air
-    </p>
-    <div class="o-richtext o-box" style="background: beige">
-
-        <h1>Header (the first one) inside richtext</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate dolore facere id incidunt nostrum sapiente voluptate? A distinctio enim exercitationem itaque maiores necessitatibus, neque nisi provident quas veritatis voluptates.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi dicta ea facere harum laboriosam minima molestiae molestias natus nobis obcaecati pariatur porro quas quidem quod sequi velit, voluptatem.
-        </p>
-        <h2>Header 2</h2>
-        <ul>
-            <li>list item</li>
-            <li>list item</li>
-        </ul>
-        <h3>Header 3</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto eligendi fuga repellendus unde. Aliquam, assumenda excepturi fuga in, modi numquam officiis quas qui quos, rerum saepe similique tempora. Illo.s
-        </p>
 
     </div>
+</div>
+<hr class="u-margin-vertical-huge"/>
 
 
+<!--
+    MEDIA
+-->
 
-    <!-- BUTTONS -->
-    <!-- ******************************************* -->
-    <br>
-    <br>
-    <h2>Button component examples</h2>
-    <div class="o-box" style="background: #eee;">
+<div class="o-center-column">
+    <h2>Media component</h2>
+</div>
+<!-- example of media component -->
+<div class="o-section">
+    <div class="o-wrapper">
+        <div class="o-layout">
+            <div class="o-layout__item u-2/3@desktop u-push-1/6@desktop">
 
-<p>    <button>Unstyled</button>
-</p>
-    <p>  <button class="c-btn">c-btn</button></p>
+                <%= require('html-loader!./views/comp.media.html') %>
 
-    <p><button class="c-btn  c-btn--primary">Primary</button></p>
-
-    <p><button class="c-btn  c-btn--secondary">Secondary</button></p>
-
-    <p><button class="c-btn  c-btn--tertiary">Tertiary</button></p>
-
-    <p>  <button class="c-btn  c-btn--small">Small</button></p>
-    <p>  <button class="c-btn  c-btn--large">Large</button></p>
-    <p>  <button class="c-btn  c-btn--ghost">Ghosted (transparent)</button></p>
-    <p>  <button class="c-btn  c-btn--ghost  c-btn--primary">Ghosted (transparent)</button></p>
-    <p>  <button class="c-btn  c-btn--ghost  c-btn--secondary">Ghosted (transparent)</button></p>
-    <p>  <button class="c-btn  c-btn--ghost  c-btn--tertiary">Ghosted (transparent)</button></p>
-
+            </div>
+        </div>
     </div>
+</div>
+
+<hr class="u-margin-vertical-huge"/>
+
+
+<!--
+    MEDIA TEXT
+    -->
+
+<div class="o-section">
+    <div class="o-wrapper">
+        <div class="o-center-colum">
+            <h2>Media-text component</h2>
+            <p>
+                A .c-media-text css component inside some wrapper and layout (grid).
+            </p>
+            <p>
+                Variation: reverse
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- the component  -->
+<!-- variation:
+add c-media-text--reverse to the c-media-text element
+-->
+<div class="o-section">
+    <div class="o-wrapper">
+        <div class="c-media-text">
+            <div class="c-media-text__media">
+                <%= require('html-loader!./views/comp.media.html') %>
+            </div>
+            <div class="c-media-text__content">
+                <%= require('html-loader!./views/comp.richtext.html') %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="u-margin-vertical-huge"/>
+
+<!-- THREE COLUMNS EXAMPLE -->
+<div class="o-section">
+    <div class="o-wrapper">
+        <h2>Title of section - three columns example3</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi labore nostrum obcaecati optio placeat provident recusandae repellendus sint voluptatum. Animi aperiam aut dolores necessitatibus neque? Eaque fugit pariatur quis.
+        </p>
+        <div class="o-layout  o-layout--padded@mobile">
+            <div class="o-layout__item u-1/3@tablet">
+                <%= require('html-loader!./views/comp.media.html') %>
+            </div>
+            <div class="o-layout__item u-1/3@tablet">
+                <%= require('html-loader!./views/comp.media-img.html') %>
+            </div>
+            <div class="o-layout__item u-1/3@tablet">
+                <%= require('html-loader!./views/comp.richtext.html') %>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-</div><!-- wrapper -->
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <script src="/bundle.js"></script>
 
 </body>

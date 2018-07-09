@@ -130,6 +130,7 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 // overrides is in 0_settings
 @import "../../node_modules/inuitcss/objects/objects.wrapper";
 @import "../../node_modules/inuitcss/objects/objects.layout";
+@import "4_objects/objects.layout-ext";
 @import "../../node_modules/inuitcss/objects/objects.media";
 @import "4_objects/objects.media";
 @import "../../node_modules/inuitcss/objects/objects.flag";
@@ -145,6 +146,7 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 @import "../../node_modules/inuitcss/objects/objects.pack";
 @import "4_objects/object.section";
 @import "4_objects/object.center-column";
+@import "4_objects/object.richtext";
 
 
 
@@ -155,7 +157,7 @@ $mq-show-breakpoints: (mobile,tablet,desktop, wide);
 //
 // Build and include your project’s UI 5_components here.
 @import "5_components/example.components.buttons";
-@import "4_objects/object.richtext";
+@import "5_components/comp.media-text";
 
 // (PAGES)  // custom
 //
