@@ -1,0 +1,64 @@
+.c-site-footer {
+  padding: $inuit-global-spacing-unit 0;
+  background-color: grey;
+
+}
+
+.c-site-footer__col {
+  //padding-bottom: $inuit-global-spacing-unit;
+  margin-bottom: $pacing-unit;
+
+  @include mix-break($until: tablet) {
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+    padding: $inuit-global-spacing-unit 0;
+  }
+}
+
+.c-site-footer__col-header { // p
+
+  font-weight: 500;
+  margin-bottom: .5em;
+
+  &:after {
+    display: none;
+  }
+
+  @include mix-break($until: tablet) {
+    margin: 0;
+    position: relative;
+    padding-right: $inuit-global-spacing-unit-large;
+
+    &:after {
+      display: block;
+      background-color: rgba(white, .6);
+      content: 'pil';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $inuit-global-spacing-unit-large;
+      height: 100%;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
+
+
+}
+
+.c-site-footer__col-content {
+  margin-bottom: 0;
+  @include mix-last-child-no-bottom-margin;
+  max-height: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+
+  .c-site-footer .is-active & {
+    max-height: 2000px;
+
+  }
+
+  @include mix-break(tablet) {
+    max-height: 2000px;
+  }
+}
